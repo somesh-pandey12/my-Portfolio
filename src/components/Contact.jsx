@@ -4,44 +4,22 @@ import { MdEmail } from "react-icons/md";
 
 export default function Contact() {
   return (
-    <section id="contact" style={{ padding: '80px 0', textAlign: 'center', backgroundColor: '#f8fafc' }}>
-      <h2>Get In Touch</h2>
-      <p style={{ margin: '20px 0', color: '#64748b' }}>
-        I am currently looking for professional opportunities in Software Engineering.
-      </p>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
+    <section id="contact" className="py-20">
+      <div className="relative rounded-3xl border border-ink-border bg-ink-800/60 backdrop-blur px-8 py-16 text-center overflow-hidden">
+        <div className="glow w-72 h-72 bg-brand-from/20 -top-10 left-1/3" />
 
-        <a href="mailto:someshpandeycil@gmail.com" style={linkBtn}>
-          <MdEmail size={18} /> Email Me
-        </a>
+        <div className="relative z-10">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-mist-100 mb-4">Let's build something great</h2>
+          <p className="text-mist-500 max-w-md mx-auto mb-8">I'm currently looking for Software Engineering opportunities. Feel free to reach out.</p>
 
-        <a href="https://github.com/somesh-pandey12" target="_blank" rel="noopener noreferrer" style={linkBtn}>
-          <FaGithub size={18} /> GitHub
-        </a>
-
-        <a href="https://www.linkedin.com/in/somesh-pandey-536222296/" target="_blank" rel="noopener noreferrer" style={{ ...linkBtn, backgroundColor: '#0a66c2' }}>
-          <FaLinkedin size={18} /> LinkedIn
-        </a>
-
-        <a href="https://leetcode.com/u/somesh_pandey" target="_blank" rel="noopener noreferrer" style={{ ...linkBtn, backgroundColor: '#f89f1b' }}>
-          <SiLeetcode size={18} /> LeetCode
-        </a>
-
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a href="mailto:someshpandeycil@gmail.com" className="flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-gradient text-ink-950 font-semibold text-sm hover:opacity-90 transition"><MdEmail size={18} /> Email Me</a>
+            <a href="https://github.com/somesh-pandey12" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-xl border border-ink-border text-mist-100 font-semibold text-sm hover:border-mist-500 transition"><FaGithub size={16} /> GitHub</a>
+            <a href="https://www.linkedin.com/in/somesh-pandey-536222296" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-xl border border-ink-border text-mist-100 font-semibold text-sm hover:border-mist-500 transition"><FaLinkedin size={16} /> LinkedIn</a>
+            <a href="https://leetcode.com/u/somesh_pandey" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 rounded-xl border border-ink-border text-mist-100 font-semibold text-sm hover:border-mist-500 transition"><SiLeetcode size={16} /> LeetCode</a>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
-
-const linkBtn = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: '8px',
-  padding: '10px 22px',
-  backgroundColor: 'var(--text)',
-  color: 'white',
-  textDecoration: 'none',
-  borderRadius: '8px',
-  fontWeight: '500',
-  fontSize: '14px',
-  transition: 'transform 0.2s ease, opacity 0.2s ease'
-};

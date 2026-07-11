@@ -1,20 +1,20 @@
 export default function Achievements() {
   const stats = [
-    { label: "LeetCode", value: "100+ Solved", detail: "Focus: Monotonic Stack, DSA", link: "https://leetcode.com/u/somesh_pandey/" },
-    { label: "B.Tech CSE", value: "3rd Year", detail: "Specialization in AI", link: "#" },
-    { label: "Full Stack", value: "MERN", detail: "Legal-Eyes & Portfolio", link: "#projects" }
+    { label: "LeetCode", value: "100+", detail: "Problems solved — DSA, Monotonic Stack", link: "https://leetcode.com/u/somesh_pandey/" },
+    { label: "Education", value: "Final Year", detail: "B.Tech CSE (AI), KCC Institute of Technology and Management" },
+    { label: "Stack", value: "MERN", detail: "4+ full-stack projects shipped", link: "#projects" },
   ];
 
   return (
-    <section id="achievements" style={sectionStyle}>
-      <div style={gridStyle}>
+    <section className="py-10">
+      <div className="grid sm:grid-cols-3 gap-5">
         {stats.map((stat, index) => (
-          <div key={index} style={cardStyle}>
-            <h4 style={{ color: 'var(--secondary)', fontSize: '0.9rem' }}>{stat.label}</h4>
-            <h2 style={{ color: 'var(--accent)', margin: '5px 0' }}>{stat.value}</h2>
-            <p style={{ fontSize: '0.85rem', color: '#64748b' }}>{stat.detail}</p>
-            {stat.label === "LeetCode" && (
-              <a href={stat.link} target="_blank" rel="noreferrer" style={miniBtn}>View Profile</a>
+          <div key={index} className="rounded-2xl border border-ink-border bg-ink-800/60 backdrop-blur px-6 py-6 hover:border-brand-solid/40 hover:-translate-y-0.5 transition-all">
+            <p className="text-xs font-semibold uppercase tracking-wide text-mist-500 mb-2">{stat.label}</p>
+            <p className="font-display text-3xl font-bold text-mist-100">{stat.value}</p>
+            <p className="text-sm text-mist-500 mt-2">{stat.detail}</p>
+            {stat.link && (
+              <a href={stat.link} target="_blank" rel="noreferrer" className="inline-block mt-3 text-sm font-medium text-gradient hover:underline">View →</a>
             )}
           </div>
         ))}
@@ -22,23 +22,3 @@ export default function Achievements() {
     </section>
   );
 }
-
-const sectionStyle = { padding: '40px 0' };
-const gridStyle = { display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' };
-const cardStyle = {
-  background: '#fff',
-  padding: '20px',
-  borderRadius: '12px',
-  border: '1px solid #e2e8f0',
-  textAlign: 'center',
-  minWidth: '200px',
-  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-};
-const miniBtn = {
-  display: 'inline-block',
-  marginTop: '10px',
-  fontSize: '0.8rem',
-  color: '#2563eb',
-  textDecoration: 'none',
-  fontWeight: 'bold'
-};

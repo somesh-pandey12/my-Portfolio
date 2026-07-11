@@ -1,29 +1,25 @@
 export default function Skills() {
   const skillCategories = [
-    {
-      title: "Languages",
-      items: ["C++ (Strong DSA)", "JavaScript (ES6+)"]
-    },
-    {
-      title: "Web Tech (MERN)",
-      items: ["MongoDB", "Express.js", "React.js", "Node.js"]
-    },
-    {
-      title: "Tools & Others",
-      items: ["Git", "GitHub", "VS Code", "Vercel", "Tailwind CSS"]
-    }
+    { title: "Languages", items: ["C++", "JavaScript (ES6+)"] },
+    { title: "MERN Stack", items: ["MongoDB", "Express.js", "React.js", "Node.js"] },
+    { title: "Tools", items: ["Git", "GitHub", "VS Code", "Vercel", "Tailwind CSS"] },
   ];
 
   return (
-    <section id="skills" style={{ padding: '60px 0' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>Technical Skills</h2>
-      <div style={containerStyle}>
+    <section id="skills" className="py-20">
+      <h2 className="font-display text-3xl font-bold text-mist-100 text-center mb-3">Technical Skills</h2>
+      <p className="text-mist-500 text-center mb-12">Technologies I work with day to day</p>
+
+      <div className="grid md:grid-cols-3 gap-5">
         {skillCategories.map((cat, index) => (
-          <div key={index} style={categoryStyle}>
-            <h3 style={{ color: 'var(--accent)', marginBottom: '15px' }}>{cat.title}</h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
+          <div key={index} className="rounded-2xl border border-ink-border bg-ink-800/60 backdrop-blur px-6 py-6">
+            <h3 className="font-display font-semibold text-mist-100 mb-4">{cat.title}</h3>
+            <div className="flex flex-wrap gap-2">
               {cat.items.map((skill, idx) => (
-                <span key={idx} style={skillBadgeStyle}>
+                <span
+                  key={idx}
+                  className="text-sm px-3.5 py-1.5 rounded-full border border-ink-border bg-ink-700/60 text-mist-300 hover:border-brand-solid/50 hover:text-mist-100 transition-colors"
+                >
                   {skill}
                 </span>
               ))}
@@ -34,27 +30,3 @@ export default function Skills() {
     </section>
   );
 }
-
-const containerStyle = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-  gap: '30px'
-};
-
-const categoryStyle = {
-  background: '#f8fafc',
-  padding: '25px',
-  borderRadius: '15px',
-  textAlign: 'center',
-  border: '1px solid #e2e8f0'
-};
-
-const skillBadgeStyle = {
-  padding: '8px 16px',
-  backgroundColor: '#fff',
-  border: '1px solid #cbd5e1',
-  borderRadius: '20px',
-  fontSize: '0.9rem',
-  fontWeight: '500',
-  color: '#334155'
-};
