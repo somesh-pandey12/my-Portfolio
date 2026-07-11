@@ -1,31 +1,60 @@
-export default function Skills() {
-  const skillCategories = [
-    { title: "Languages", items: ["C++", "JavaScript (ES6+)"] },
-    { title: "MERN Stack", items: ["MongoDB", "Express.js", "React.js", "Node.js"] },
-    { title: "Tools", items: ["Git", "GitHub", "VS Code", "Vercel", "Tailwind CSS"] },
-  ];
+import {
+  SiCplusplus, SiJavascript, SiPython, SiMongodb, SiExpress, SiReact, SiNodedotjs,
+  SiGit, SiGithub, SiVercel, SiTailwindcss,
+} from "react-icons/si";
+import { FaCode, FaRobot, FaBrain } from "react-icons/fa";
 
+const row1 = [
+  { name: "C++", Icon: SiCplusplus },
+  { name: "Python", Icon: SiPython },
+  { name: "JavaScript", Icon: SiJavascript },
+  { name: "AI", Icon: FaRobot },
+  { name: "Machine Learning", Icon: FaBrain },
+  { name: "MongoDB", Icon: SiMongodb },
+  { name: "Express.js", Icon: SiExpress },
+  { name: "React.js", Icon: SiReact },
+  { name: "Node.js", Icon: SiNodedotjs },
+];
+
+const row2 = [
+  { name: "Git", Icon: SiGit },
+  { name: "GitHub", Icon: SiGithub },
+  { name: "VS Code", Icon: FaCode },
+  { name: "Vercel", Icon: SiVercel },
+  { name: "Tailwind CSS", Icon: SiTailwindcss },
+];
+
+function Chip({ name, Icon }) {
+  return (
+    <div className="flex items-center gap-2.5 px-5 py-3 rounded-xl border border-ink-border bg-ink-800/60 mx-2.5 flex-shrink-0">
+      <Icon size={20} className="text-brand-solid" />
+      <span className="text-sm font-medium text-mist-300 whitespace-nowrap">{name}</span>
+    </div>
+  );
+}
+
+function MarqueeRow({ items, reverse }) {
+  const doubled = [...items, ...items];
+  return (
+    <div className="marquee-row marquee-fade overflow-hidden">
+      <div className={`flex w-max py-1 ${reverse ? "marquee-track-reverse" : "marquee-track"}`}>
+        {doubled.map((item, i) => (
+          <Chip key={i} name={item.name} Icon={item.Icon} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function Skills() {
   return (
     <section id="skills" className="py-20">
       <h2 className="font-display text-3xl font-bold text-mist-100 text-center mb-3">Technical Skills</h2>
       <p className="text-mist-500 text-center mb-12">Technologies I work with day to day</p>
 
-      <div className="grid md:grid-cols-3 gap-5">
-        {skillCategories.map((cat, index) => (
-          <div key={index} className="rounded-2xl border border-ink-border bg-ink-800/60 backdrop-blur px-6 py-6">
-            <h3 className="font-display font-semibold text-mist-100 mb-4">{cat.title}</h3>
-            <div className="flex flex-wrap gap-2">
-              {cat.items.map((skill, idx) => (
-                <span
-                  key={idx}
-                  className="text-sm px-3.5 py-1.5 rounded-full border border-ink-border bg-ink-700/60 text-mist-300 hover:border-brand-solid/50 hover:text-mist-100 transition-colors"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
+      <div className="space-y-4">
+        <MarqueeRow items={row1} />
+        <MarqueeRow items={row2} reverse />
       </div>
     </section>
   );
