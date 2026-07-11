@@ -3,6 +3,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Achievements from './components/Achievements';
 import Skills from './components/Skills';
+import TypewriterText from './components/TypewriterText';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
               Available for opportunities
             </div>
             <h1 className="fade-up font-display text-5xl md:text-7xl font-bold tracking-tight text-mist-100 mb-6" style={{ animationDelay: '0.05s' }}>Somesh Pandey</h1>
-            <p className="fade-up font-display text-xl md:text-2xl font-semibold text-gradient mb-6" style={{ animationDelay: '0.1s' }}>Full-Stack Developer (MERN) &amp; DSA Enthusiast</p>
+            <p className="fade-up font-display text-xl md:text-2xl font-semibold text-gradient mb-6 min-h-[2.5rem]" style={{ animationDelay: '0.1s' }}><TypewriterText /></p>
             <p className="fade-up max-w-xl mx-auto text-mist-500 leading-relaxed mb-10" style={{ animationDelay: '0.15s' }}>Final-year B.Tech CSE (AI) student at KCC Institute of Technology and Management, specializing in full-stack development with the MERN stack and strong problem-solving skills in Data Structures &amp; Algorithms using C++. Passionate about building efficient, scalable, and user-focused web applications.</p>
             <div className="fade-up flex flex-wrap items-center justify-center gap-4" style={{ animationDelay: '0.2s' }}>
               <a href="#projects" className="px-7 py-3.5 rounded-xl bg-brand-gradient text-ink-950 font-semibold text-sm hover:opacity-90 transition shadow-lg shadow-brand-from/20">View my work</a>
