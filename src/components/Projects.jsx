@@ -14,6 +14,12 @@ const myProjects = [
     tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
     repo: "https://github.com/somesh-pandey12/FoodVerse-MERN-App",
   },
+  {
+    title: "CareerLens AI",
+    description: "AI-powered career copilot for students and professionals — parses resumes, semantically matches jobs, analyzes skill gaps, runs mock interviews, and drafts cover letters.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js,FastAPI, Python 3.11+, Groq — llama-3.3-70b-versatile, PyMuPDF (fitz)"],
+    repo: "https://github.com/somesh-pandey12/skillbridge",
+  },
 ];
 
 export default function Projects() {
