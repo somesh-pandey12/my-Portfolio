@@ -15,10 +15,10 @@ const myProjects = [
     repo: "https://github.com/somesh-pandey12/FoodVerse-MERN-App",
   },
   {
-    title: "CareerLens AI",
-    description: "AI-powered career copilot for students and professionals — parses resumes, semantically matches jobs, analyzes skill gaps, runs mock interviews, and drafts cover letters.",
-    tech: ["MongoDB", "Express.js", "React.js", "Node.js,FastAPI, Python 3.11+, Groq — llama-3.3-70b-versatile, PyMuPDF (fitz)"],
-    repo: "https://github.com/somesh-pandey12/skillbridge",
+    title: "youtube-watch-party",
+    description: "Real-time synchronized YouTube watching with room-based access and role-based permissions (Host / Moderator / Participant). Built with the MERN stack (MongoDB, Express, React, Node.js) + Socket.IO for real-time sync.",
+    tech: ["React 18 + Vite + React Router, Node.js + Express, Socket.IO (WebSockets), MongoDB (Atlas), YouTube IFrame Player API],
+    repo: "https://github.com/somesh-pandey12/youtube-watch-party",
   },
 ];
 
