@@ -3,10 +3,10 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const myProjects = [
   {
-    title: "Verify AI",
-    description: "An AI-powered verification platform built to validate and authenticate content in real time, with a focus on accuracy and speed.",
-    tech: ["MERN Stack", "AI Integration"],
-    repo: "https://github.com/somesh-pandey12/VerifyAI",
+    title: "TruthLens",
+    description: "TruthLens checks how credible a piece of news or a social post is, and when it looks false or unverified, shows what the facts actually say",
+    tech: ["React (Vite) + Tailwind CSS v3 · Node/Express · MongoDB · Flask (TextBlob + Groq)"],
+    repo: "https://github.com/somesh-pandey12/TruthLens-AI",
   },
   {
     title: "Foodverse",
